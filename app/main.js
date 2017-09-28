@@ -14,16 +14,13 @@ document.onreadystatechange = function(){
 
 function startGame(){
 
-	// clear the board
-
-
 	// reset the turn counter
 	turn = 0;
 
 	// remove the winner notification make sure div is hidden
 	// add click events on squares
 
-	for(i=0; i<spaces.length; i++){
+	for(var i=0; i<spaces.length; i++){
 		spaces[i].innerHTML = '';
 		spaces[i].addEventListener("click", takeSpace);
 	}
@@ -31,8 +28,22 @@ function startGame(){
 
 function takeSpace() {
 
+	console.log(wins);
 	turn++;
 	this.innerHTML = symbols[turn % 2];
 	this.removeEventListener("click", takeSpace);
 	
+	for(var i=0; i<wins.length; i++){
+	if (checkForWin(wins[i]){
+		alert("woo hoo!");
+		}
+	}
 }
+
+// function checkForWin(winArray){
+
+// 	return	spaces[winArray[0]] !== '' && 
+// 	spaces[winArray[0]] === spaces[winArray[1]] && 
+// 	spaces[winArray[0]] === spaces[winArray[2]];
+	
+// }
