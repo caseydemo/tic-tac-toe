@@ -7,6 +7,7 @@ Recreate tic tac toe
 3. on their turn each player chooses an unoccupied space
 4. game goes until one player wins (3 in a row[horizontal or vertical or diagonal])
 * or if their are no available spaces - then the game is a draw
+5. Alert players when one has one or the game is a draw
 
 3 in a row = win
 all full = draw
